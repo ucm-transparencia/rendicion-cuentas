@@ -30,6 +30,7 @@ html { scroll-behavior:smooth; font-size:15px }
 body { font-family:var(--fn); background:var(--gris-c); color:var(--gris); line-height:1.6; min-height:100vh }
 a { color:inherit; text-decoration:none }
 
+/* ── HERO ── */
 .hero {
   background: linear-gradient(135deg,#b71234 0%,#8b0d27 100%);
   color: var(--blanco);
@@ -48,14 +49,10 @@ a { color:inherit; text-decoration:none }
 .hero-text h1 { font-family:var(--fn); font-size:1.4rem; font-weight:600; line-height:1.2; margin-bottom:4px }
 .hero-text p { font-size:.85rem; color:rgba(255,255,255,.88); max-width:560px; line-height:1.5 }
 
+/* ── LAYOUT ── */
 .layout { max-width:1100px; margin:0 auto; padding:28px 20px 60px; display:grid; grid-template-columns:220px 1fr; gap:28px; align-items:start }
-@media (max-width:780px) {
-  .layout { grid-template-columns:1fr; padding:16px 14px 40px }
-  .sidebar { display:none }
-  .hero { padding:18px 20px 16px }
-  .hero-text h1 { font-size:1.2rem }
-}
 
+/* ── SIDEBAR ── */
 .sidebar { position:sticky; top:16px; background:var(--blanco); border-radius:12px; border:1px solid var(--gris-b); overflow:hidden; box-shadow:var(--sh-s) }
 .sidebar-hdr { background:linear-gradient(135deg,#d42b4f 0%,#e8365d 100%); color:var(--blanco); padding:12px 16px; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em }
 .nav-list { list-style:none; padding:8px 0 }
@@ -67,11 +64,13 @@ a { color:inherit; text-decoration:none }
 .nav-item.sub a:hover { color:var(--ucm); background:var(--ucm-ll); border-left-color:var(--ucm) }
 .nav-divider { height:1px; background:var(--gris-b); margin:4px 0 }
 
+/* ── CONTENT ── */
 .content { display:flex; flex-direction:column; gap:20px }
 
 .intro-block { background:var(--blanco); border-radius:14px; border:1px solid var(--gris-b); padding:20px 24px; box-shadow:var(--sh-s); font-size:.88rem; color:var(--gris-m); line-height:1.7; opacity:0; animation:fadeUp .45s var(--ease) .02s forwards }
 .intro-block strong { color:var(--gris) }
 
+/* ── SECTIONS ── */
 .section { background:var(--blanco); border-radius:14px; border:1px solid var(--gris-b); overflow:hidden; box-shadow:var(--sh-s); transition:box-shadow var(--dur) var(--ease); opacity:0; animation:fadeUp .45s var(--ease) forwards }
 .section:nth-child(2) { animation-delay:.08s }
 .section:nth-child(3) { animation-delay:.14s }
@@ -96,7 +95,10 @@ a { color:inherit; text-decoration:none }
 .section.open .section-body { grid-template-rows:1fr }
 .section-body-inner { overflow:hidden }
 
-.cards-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:12px; padding:0 20px }
+/* ── CARDS ── */
+.section-label { padding:16px 20px 10px; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris-m) }
+
+.cards-grid { display:grid; gap:12px; padding:0 20px 20px }
 .cards-grid.cols-2 { grid-template-columns:repeat(auto-fill, minmax(260px,1fr)) }
 .cards-grid.cols-3 { grid-template-columns:repeat(auto-fill, minmax(200px,1fr)) }
 
@@ -109,22 +111,32 @@ a { color:inherit; text-decoration:none }
 .card-desc { font-size:.77rem; color:var(--gris-m); line-height:1.5; flex:1 }
 .card-actions { display:flex; gap:6px; flex-wrap:wrap; margin-top:2px }
 
+/* ── BUTTONS ── */
 .btn { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:6px; font-size:.73rem; font-weight:700; font-family:var(--fn); text-transform:uppercase; letter-spacing:.04em; cursor:pointer; transition:all var(--dur) var(--ease); border:none; white-space:nowrap }
 .btn-rojo { background:var(--ucm); color:var(--blanco) }
 .btn-rojo:hover { background:var(--ucm-d); transform:translateY(-1px); box-shadow:0 3px 10px rgba(183,18,52,.3) }
 .btn-ghost { background:transparent; color:var(--ucm); border:1.5px solid var(--ucm-l) }
 .btn-ghost:hover { background:var(--ucm-l); border-color:var(--ucm) }
 
-.section-label { padding:16px 20px 10px; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris-m) }
-.section-sep { height:1px; background:var(--gris-b); margin:16px 20px 0 }
-
+/* ── FOOTER ── */
 .footer { background:var(--blanco); border-top:1px solid var(--gris-b); padding:18px 40px; font-size:.77rem; color:var(--gris-m); display:flex; flex-direction:column; gap:6px; align-items:center; text-align:center; line-height:1.6 }
 .footer a { color:var(--ucm-d); text-decoration:underline; text-decoration-color:rgba(183,18,52,.25); transition:text-decoration-color var(--dur) }
 .footer a:hover { text-decoration-color:var(--ucm) }
 
+/* ── BACK TO TOP ── */
 #backTop { position:fixed; bottom:24px; right:24px; background:var(--ucm); color:var(--blanco); border:none; width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:18px; box-shadow:0 4px 16px rgba(183,18,52,.35); display:flex; align-items:center; justify-content:center; transition:all var(--dur) var(--ease); opacity:0; pointer-events:none; z-index:100 }
 #backTop.visible { opacity:1; pointer-events:auto }
 #backTop:hover { background:var(--ucm-d); transform:translateY(-2px) }
+
+/* ── RESPONSIVE ── */
+@media (max-width:780px) {
+  .layout { grid-template-columns:1fr; padding:16px 14px 40px }
+  .sidebar { display:none }
+  .hero { padding:18px 20px 16px }
+  .hero-text h1 { font-size:1.2rem }
+  .cards-grid.cols-2,
+  .cards-grid.cols-3 { grid-template-columns:1fr }
+}
 
 @keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
 </style>
@@ -143,36 +155,74 @@ a { color:inherit; text-decoration:none }
 
 <div class="layout">
 
+  <!-- SIDEBAR -->
   <nav class="sidebar" aria-label="Navegación de rendición de cuentas">
     <div class="sidebar-hdr">Índice de contenidos</div>
     <ul class="nav-list">
-      <li class="nav-item"><a href="#estado-universidad"><span class="nav-num">1</span> Estado de la universidad</a></li>
-      <li class="nav-item sub"><a href="#estado-universidad">↳ Informe del rector</a></li>
-      <li class="nav-item sub"><a href="#estado-universidad">Memorias académicas</a></li>
+      <li class="nav-item">
+        <a href="#estado-universidad">
+          <span class="nav-num">1</span> Estado de la universidad
+        </a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-informe-rector">↳ Informe del rector</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-memorias">↳ Memorias académicas</a>
+      </li>
       <li class="nav-divider"></li>
-      <li class="nav-item"><a href="#transparencia-supervision"><span class="nav-num">2</span> Transparencia y supervisión</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Control económico</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Gestión de personal</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Calidad docente</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Resultados académicos</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Investigación y transferencia</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Internacionalización</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Compromiso ético</a></li>
-      <li class="nav-item sub"><a href="#transparencia-supervision">↳ Captación de recursos</a></li>
+      <li class="nav-item">
+        <a href="#transparencia-supervision">
+          <span class="nav-num">2</span> Transparencia y supervisión
+        </a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-control-economico">↳ Control económico</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-personal">↳ Gestión de personal</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-calidad">↳ Calidad docente</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-resultados">↳ Resultados académicos</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-investigacion">↳ Investigación y transferencia</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-internacional">↳ Internacionalización</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-etico">↳ Compromiso ético</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-captacion">↳ Captación de recursos</a>
+      </li>
       <li class="nav-divider"></li>
-      <li class="nav-item"><a href="#organos-garantia"><span class="nav-num">3</span> Órganos de garantía</a></li>
-      <li class="nav-item sub"><a href="#organos-garantia">↳ Defensoría universitaria</a></li>
-      <li class="nav-item sub"><a href="#organos-garantia">↳ Inspección de servicios</a></li>
+      <li class="nav-item">
+        <a href="#organos-garantia">
+          <span class="nav-num">3</span> Órganos de garantía
+        </a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-defensoria">↳ Defensoría universitaria</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-inspeccion">↳ Inspección de servicios</a>
+      </li>
     </ul>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <main class="content">
 
     <div class="intro-block">
       Esta sección es el punto de acceso centralizado para la <strong>rendición de cuentas y la transparencia</strong> de la UCM, reforzando el compromiso institucional exigido por el artículo 39 de la <strong>Ley Orgánica del Sistema Universitario (LOSU)</strong>, y ofreciendo acceso a la información clave sobre su gestión y buen gobierno.
     </div>
 
-    <!-- 1. ESTADO DE LA UNIVERSIDAD -->
+    <!-- ── 1. ESTADO DE LA UNIVERSIDAD ── -->
     <div class="section open" id="estado-universidad">
       <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
         <div class="section-hdr-icon">🏫</div>
@@ -187,9 +237,9 @@ a { color:inherit; text-decoration:none }
       <div class="section-body">
         <div class="section-body-inner">
           <div class="section-label">Documentos</div>
-          <div class="cards-grid cols-2" style="padding-bottom:20px">
+          <div class="cards-grid cols-2">
 
-            <div class="card">
+            <div class="card" id="card-informe-rector">
               <div class="card-title">Informe del rector</div>
               <div class="card-desc">Informe anual del rector sobre el estado y actividad de la Universidad Complutense de Madrid.</div>
               <div class="card-actions">
@@ -198,16 +248,20 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-title">Memorias académicas </div>
+            <div class="card" id="card-memorias">
+              <div class="card-title">Memorias académicas</div>
               <div class="card-desc">Memorias institucionales de la Universidad Complutense de Madrid.</div>
               <div class="card-actions">
-                <a href="https://www.ucm.es/portaldetransparencia/memorias" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver memorias">Ver →</a>
+                <a href="https://www.ucm.es/portaldetransparencia/memorias" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver memorias académicas">Ver →</a>
               </div>
             </div>
 
-            
-    <!-- 2. TRANSPARENCIA Y SUPERVISIÓN -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 2. TRANSPARENCIA Y SUPERVISIÓN ── -->
     <div class="section open" id="transparencia-supervision">
       <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
         <div class="section-hdr-icon">🔍</div>
@@ -222,9 +276,9 @@ a { color:inherit; text-decoration:none }
       <div class="section-body">
         <div class="section-body-inner">
           <div class="section-label">Áreas de supervisión</div>
-          <div class="cards-grid cols-3" style="padding-bottom:20px">
+          <div class="cards-grid cols-3">
 
-            <div class="card">
+            <div class="card" id="card-control-economico">
               <div class="card-title">Control económico</div>
               <div class="card-desc">Información sobre la gestión y supervisión económico-financiera de la UCM.</div>
               <div class="card-actions">
@@ -232,7 +286,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-personal">
               <div class="card-title">Gestión de personal</div>
               <div class="card-desc">Datos sobre la plantilla, selección y gestión del personal docente, investigador y de administración.</div>
               <div class="card-actions">
@@ -240,7 +294,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-calidad">
               <div class="card-title">Calidad docente</div>
               <div class="card-desc">Evaluación y programas de mejora de la calidad de la actividad docente en la UCM.</div>
               <div class="card-actions">
@@ -248,7 +302,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-resultados">
               <div class="card-title">Resultados académicos</div>
               <div class="card-desc">Indicadores y estadísticas sobre rendimiento y resultados académicos de los estudiantes.</div>
               <div class="card-actions">
@@ -256,7 +310,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-investigacion">
               <div class="card-title">Investigación y transferencia</div>
               <div class="card-desc">Actividad investigadora, proyectos, publicaciones y transferencia del conocimiento a la sociedad.</div>
               <div class="card-actions">
@@ -264,7 +318,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-internacional">
               <div class="card-title">Estrategia de internacionalización</div>
               <div class="card-desc">Programas, convenios y datos sobre la actividad internacional de la UCM.</div>
               <div class="card-actions">
@@ -272,7 +326,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-etico">
               <div class="card-title">Compromiso ético</div>
               <div class="card-desc">Código ético, integridad institucional y mecanismos de buen gobierno de la UCM.</div>
               <div class="card-actions">
@@ -280,7 +334,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-captacion">
               <div class="card-title">Captación de recursos</div>
               <div class="card-desc">Información sobre financiación externa, mecenazgo y otras fuentes de ingresos de la UCM.</div>
               <div class="card-actions">
@@ -293,7 +347,7 @@ a { color:inherit; text-decoration:none }
       </div>
     </div>
 
-    <!-- 3. ÓRGANOS DE GARANTÍA -->
+    <!-- ── 3. ÓRGANOS DE GARANTÍA ── -->
     <div class="section open" id="organos-garantia">
       <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
         <div class="section-hdr-icon">🛡️</div>
@@ -308,9 +362,9 @@ a { color:inherit; text-decoration:none }
       <div class="section-body">
         <div class="section-body-inner">
           <div class="section-label">Órganos</div>
-          <div class="cards-grid cols-2" style="padding-bottom:20px">
+          <div class="cards-grid cols-2">
 
-            <div class="card">
+            <div class="card" id="card-defensoria">
               <div class="card-title">Defensoría universitaria</div>
               <div class="card-desc">Órgano comisionado para la defensa de los derechos y libertades de la comunidad universitaria.</div>
               <div class="card-actions">
@@ -318,7 +372,7 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card-inspeccion">
               <div class="card-title">Inspección de servicios</div>
               <div class="card-desc">Control del funcionamiento de los servicios administrativos y académicos de la UCM.</div>
               <div class="card-actions">
@@ -341,25 +395,65 @@ a { color:inherit; text-decoration:none }
 <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver al inicio">↑</button>
 
 <script>
+// ── Toggle sección ──
 function toggle(hdr) {
   const section = hdr.closest('.section');
   const isOpen = section.classList.contains('open');
   section.classList.toggle('open', !isOpen);
-  hdr.setAttribute('aria-expanded', !isOpen);
+  hdr.setAttribute('aria-expanded', String(!isOpen));
 }
+
+// ── Resaltar enlace activo en sidebar según scroll ──
 const sections = document.querySelectorAll('.section[id]');
-const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
-const observer = new IntersectionObserver(entries => {
+const navLinks  = document.querySelectorAll('.nav-list a[href^="#"]');
+
+// Marca activo el enlace de sección cuando la sección está en pantalla
+const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const id = entry.target.id;
-      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      const id = '#' + entry.target.id;
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === id);
+      });
     }
   });
-}, { threshold: 0.25, rootMargin: '-60px 0px -60% 0px' });
-sections.forEach(s => observer.observe(s));
+}, { threshold: 0.15, rootMargin: '-60px 0px -55% 0px' });
+sections.forEach(s => sectionObserver.observe(s));
+
+// ── Scroll hasta ficha al clicar enlace de subnivel ──
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+
+    // Si el target es una card, asegurar que su sección padre está abierta
+    const parentSection = target.closest('.section');
+    if (parentSection && !parentSection.classList.contains('open')) {
+      parentSection.classList.add('open');
+      parentSection.querySelector('.section-hdr')?.setAttribute('aria-expanded', 'true');
+    }
+
+    // Pequeño delay para que el CSS de apertura termine antes de hacer scroll
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Animar la card destino brevemente
+      if (target.classList.contains('card')) {
+        target.style.outline = '2px solid var(--ucm)';
+        target.style.outlineOffset = '2px';
+        setTimeout(() => { target.style.outline = ''; target.style.outlineOffset = ''; }, 1200);
+      }
+    }, 60);
+  });
+});
+
+// ── Botón volver arriba ──
 const backTop = document.getElementById('backTop');
 window.addEventListener('scroll', () => backTop.classList.toggle('visible', window.scrollY > 300));
+
+// ── Hash en la URL al cargar ──
 function openFromHash() {
   const id = location.hash.replace('#', '');
   if (!id) return;
@@ -370,7 +464,7 @@ function openFromHash() {
     section.classList.add('open');
     section.querySelector('.section-hdr')?.setAttribute('aria-expanded', 'true');
   }
-  setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+  setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
 }
 window.addEventListener('hashchange', openFromHash);
 openFromHash();
