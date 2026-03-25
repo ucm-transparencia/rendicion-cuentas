@@ -75,6 +75,8 @@ a { color:inherit; text-decoration:none }
 .section:nth-child(2) { animation-delay:.08s }
 .section:nth-child(3) { animation-delay:.14s }
 .section:nth-child(4) { animation-delay:.20s }
+.section:nth-child(5) { animation-delay:.26s }
+.section:nth-child(6) { animation-delay:.32s }
 .section:hover { box-shadow:var(--sh-m) }
 
 .section-hdr { display:flex; align-items:center; gap:12px; padding:16px 20px; cursor:pointer; user-select:none; border-bottom:1px solid transparent; transition:all var(--dur) var(--ease) }
@@ -160,57 +162,72 @@ a { color:inherit; text-decoration:none }
     <div class="sidebar-hdr">Índice de contenidos</div>
     <ul class="nav-list">
       <li class="nav-item">
-        <a href="#estado-universidad">
-          <span class="nav-num">1</span> Estado de la universidad
+        <a href="#gobierno-direccion">
+          <span class="nav-num">1</span> Gobierno y dirección
         </a>
       </li>
       <li class="nav-item sub">
         <a href="#card-informe-rector">↳ Informe del rector</a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-memorias">↳ Memorias académicas</a>
+        <a href="#card-planes-estrategicos">↳ Planes estratégicos</a>
       </li>
       <li class="nav-divider"></li>
       <li class="nav-item">
-        <a href="#transparencia-supervision">
-          <span class="nav-num">2</span> Transparencia y supervisión
+        <a href="#resultados-gestion">
+          <span class="nav-num">2</span> Resultados y gestión
         </a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-control-economico">↳ Control económico</a>
+        <a href="#card-memorias">↳ Memorias académicas</a>
       </li>
       <li class="nav-item sub">
         <a href="#card-personal">↳ Gestión de personal</a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-calidad">↳ Calidad docente</a>
-      </li>
-      <li class="nav-item sub">
-        <a href="#card-resultados">↳ Resultados académicos</a>
-      </li>
-      <li class="nav-item sub">
         <a href="#card-investigacion">↳ Investigación y transferencia</a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-internacional">↳ Internacionalización</a>
+        <a href="#card-resultados-economicos">↳ Resultados económicos</a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-etico">↳ Compromiso ético</a>
+        <a href="#card-internacional">↳ Internacionalización</a>
       </li>
       <li class="nav-item sub">
         <a href="#card-captacion">↳ Captación de recursos</a>
       </li>
       <li class="nav-divider"></li>
       <li class="nav-item">
-        <a href="#organos-garantia">
-          <span class="nav-num">3</span> Órganos de garantía
+        <a href="#integridad-gobierno">
+          <span class="nav-num">3</span> Integridad y buen gobierno
         </a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-defensoria">↳ Defensoría universitaria</a>
+        <a href="#card-etico">↳ Compromiso ético</a>
+      </li>
+      <li class="nav-divider"></li>
+      <li class="nav-item">
+        <a href="#impacto-social">
+          <span class="nav-num">4</span> Impacto social
+        </a>
       </li>
       <li class="nav-item sub">
-        <a href="#card-inspeccion">↳ Inspección de servicios</a>
+        <a href="#card-compromiso-social">↳ Compromiso social</a>
+      </li>
+      <li class="nav-divider"></li>
+      <li class="nav-item">
+        <a href="#evaluacion-mejora">
+          <span class="nav-num">5</span> Evaluación y mejora continua
+        </a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-evaluaciones-externas">↳ Evaluaciones externas</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-rankings">↳ Rankings institucionales</a>
+      </li>
+      <li class="nav-item sub">
+        <a href="#card-calidad">↳ Calidad docente</a>
       </li>
     </ul>
   </nav>
@@ -222,13 +239,14 @@ a { color:inherit; text-decoration:none }
       Esta sección es el punto de acceso centralizado para la <strong>rendición de cuentas y la transparencia</strong> de la UCM, reforzando el compromiso institucional exigido por el artículo 39 de la <strong>Ley Orgánica del Sistema Universitario (LOSU)</strong>, y ofreciendo acceso a la información clave sobre su gestión y buen gobierno.
     </div>
 
-    <!-- ── 1. ESTADO DE LA UNIVERSIDAD ── -->
-    <div class="section open" id="estado-universidad">
+    <!-- ── 1. GOBIERNO Y DIRECCIÓN INSTITUCIONAL ── -->
+    <div class="section open" id="gobierno-direccion">
       <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
-        <div class="section-hdr-icon">🏫</div>
+        <div class="section-hdr-icon">🏛️</div>
         <div class="section-hdr-text">
-          <h2>Estado de la universidad</h2>
-                  </div>
+          <h2>Gobierno y dirección institucional</h2>
+          <span>Informe del rector y planes estratégicos</span>
+        </div>
         <div class="section-chevron">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </div>
@@ -247,11 +265,11 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card" id="card-memorias">
-              <div class="card-title">Memorias académicas</div>
-              <div class="card-desc">Memorias institucionales de la Universidad Complutense de Madrid.</div>
+            <div class="card" id="card-planes-estrategicos">
+              <div class="card-title">Planes estratégicos</div>
+              <div class="card-desc">Planificación estratégica institucional de la UCM: objetivos, líneas de acción y horizonte de futuro.</div>
               <div class="card-actions">
-                <a href="https://www.ucm.es/portaldetransparencia/memorias" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver memorias académicas">Ver →</a>
+                <a href="https://www.ucm.es/portaldetransparencia/planes-estrategicos" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver planes estratégicos">Ver →</a>
               </div>
             </div>
 
@@ -260,13 +278,13 @@ a { color:inherit; text-decoration:none }
       </div>
     </div>
 
-    <!-- ── 2. TRANSPARENCIA Y SUPERVISIÓN ── -->
-    <div class="section open" id="transparencia-supervision">
+    <!-- ── 2. RESULTADOS ACADÉMICOS Y DE GESTIÓN ── -->
+    <div class="section open" id="resultados-gestion">
       <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
-        <div class="section-hdr-icon">🔍</div>
+        <div class="section-hdr-icon">📈</div>
         <div class="section-hdr-text">
-          <h2>Transparencia y supervisión universitaria</h2>
-          <span>Control económico, personal, docencia, investigación e internacionalización</span>
+          <h2>Resultados académicos y de gestión</h2>
+          <span>Memorias, personal, investigación, economía e internacionalización</span>
         </div>
         <div class="section-chevron">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
@@ -274,14 +292,14 @@ a { color:inherit; text-decoration:none }
       </div>
       <div class="section-body">
         <div class="section-body-inner">
-          <div class="section-label">Áreas de supervisión</div>
+          <div class="section-label">Áreas</div>
           <div class="cards-grid cols-3">
 
-            <div class="card" id="card-control-economico">
-              <div class="card-title">Control económico</div>
-              <div class="card-desc">Información sobre la gestión y supervisión económico-financiera de la UCM.</div>
+            <div class="card" id="card-memorias">
+              <div class="card-title">Memorias académicas</div>
+              <div class="card-desc">Memorias institucionales de la Universidad Complutense de Madrid.</div>
               <div class="card-actions">
-                <a href="https://www.ucm.es/portaldetransparencia/control-gestion-economica-financiera" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver control económico">Ver →</a>
+                <a href="https://www.ucm.es/portaldetransparencia/memorias" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver memorias académicas">Ver →</a>
               </div>
             </div>
 
@@ -293,22 +311,6 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
-            <div class="card" id="card-calidad">
-              <div class="card-title">Calidad docente</div>
-              <div class="card-desc">Evaluación y programas de mejora de la calidad de la actividad docente en la UCM.</div>
-              <div class="card-actions">
-                <a href="https://www.ucm.es/portaldetransparencia/calidad-docente" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver calidad docente">Ver →</a>
-              </div>
-            </div>
-
-            <div class="card" id="card-resultados">
-              <div class="card-title">Resultados académicos</div>
-              <div class="card-desc">Indicadores y estadísticas sobre rendimiento y resultados académicos de los estudiantes.</div>
-              <div class="card-actions">
-                <a href="https://www.ucm.es/portaldetransparencia/resultados-academicos" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver resultados académicos">Ver →</a>
-              </div>
-            </div>
-
             <div class="card" id="card-investigacion">
               <div class="card-title">Investigación y transferencia</div>
               <div class="card-desc">Actividad investigadora, proyectos, publicaciones y transferencia del conocimiento a la sociedad.</div>
@@ -317,19 +319,19 @@ a { color:inherit; text-decoration:none }
               </div>
             </div>
 
+            <div class="card" id="card-resultados-economicos">
+              <div class="card-title">Resultados económicos</div>
+              <div class="card-desc">Información sobre la gestión y supervisión económico-financiera de la UCM.</div>
+              <div class="card-actions">
+                <a href="https://www.ucm.es/portaldetransparencia/control-gestion-economica-financiera" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver resultados económicos">Ver →</a>
+              </div>
+            </div>
+
             <div class="card" id="card-internacional">
               <div class="card-title">Estrategia de internacionalización</div>
               <div class="card-desc">Programas, convenios y datos sobre la actividad internacional de la UCM.</div>
               <div class="card-actions">
                 <a href="https://ucm.es/internacional" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver estrategia de internacionalización">Ver →</a>
-              </div>
-            </div>
-
-            <div class="card" id="card-etico">
-              <div class="card-title">Compromiso ético</div>
-              <div class="card-desc">Código ético, integridad institucional y mecanismos de buen gobierno de la UCM.</div>
-              <div class="card-actions">
-                <a href="https://www.ucm.es/portaldetransparencia/compromiso-etico" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver compromiso ético">Ver →</a>
               </div>
             </div>
 
@@ -346,13 +348,13 @@ a { color:inherit; text-decoration:none }
       </div>
     </div>
 
-    <!-- ── 3. ÓRGANOS DE GARANTÍA ── -->
-    <div class="section open" id="organos-garantia">
+    <!-- ── 3. INTEGRIDAD Y BUEN GOBIERNO ── -->
+    <div class="section open" id="integridad-gobierno">
       <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
-        <div class="section-hdr-icon">🛡️</div>
+        <div class="section-hdr-icon">⚖️</div>
         <div class="section-hdr-text">
-          <h2>Órganos de garantía</h2>
-          <span>Defensoría universitaria e Inspección de servicios</span>
+          <h2>Integridad y buen gobierno</h2>
+          <span>Código ético e integridad institucional</span>
         </div>
         <div class="section-chevron">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
@@ -360,22 +362,90 @@ a { color:inherit; text-decoration:none }
       </div>
       <div class="section-body">
         <div class="section-body-inner">
-          <div class="section-label">Órganos</div>
+          <div class="section-label">Documentos</div>
           <div class="cards-grid cols-2">
 
-            <div class="card" id="card-defensoria">
-              <div class="card-title">Defensoría universitaria</div>
-              <div class="card-desc">Órgano comisionado para la defensa de los derechos y libertades de la comunidad universitaria.</div>
+            <div class="card" id="card-etico">
+              <div class="card-title">Compromiso ético</div>
+              <div class="card-desc">Código ético, integridad institucional y mecanismos de buen gobierno de la UCM.</div>
               <div class="card-actions">
-                <a href="https://www.ucm.es/defensoria-universitaria" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver información de la Defensoría universitaria">Ver →</a>
+                <a href="https://www.ucm.es/portaldetransparencia/compromiso-etico" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver compromiso ético">Ver →</a>
               </div>
             </div>
 
-            <div class="card" id="card-inspeccion">
-              <div class="card-title">Inspección de servicios</div>
-              <div class="card-desc">Control del funcionamiento de los servicios administrativos y académicos de la UCM.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 4. IMPACTO SOCIAL Y COMPROMISO INSTITUCIONAL ── -->
+    <div class="section open" id="impacto-social">
+      <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
+        <div class="section-hdr-icon">🤝</div>
+        <div class="section-hdr-text">
+          <h2>Impacto social y compromiso institucional</h2>
+          <span>Responsabilidad social y acción comunitaria</span>
+        </div>
+        <div class="section-chevron">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="section-body-inner">
+          <div class="section-label">Documentos</div>
+          <div class="cards-grid cols-2">
+
+            <div class="card" id="card-compromiso-social">
+              <div class="card-title">Compromiso social</div>
+              <div class="card-desc">Acciones, programas e iniciativas de responsabilidad social de la UCM con su entorno y la sociedad.</div>
               <div class="card-actions">
-                <a href="https://www.ucm.es/inspeccion-de-servicios" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver información de la Inspección de servicios">Ver →</a>
+                <a href="https://www.ucm.es/portaldetransparencia/compromiso-social" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver compromiso social">Ver →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 5. EVALUACIÓN Y MEJORA CONTINUA ── -->
+    <div class="section open" id="evaluacion-mejora">
+      <div class="section-hdr" onclick="toggle(this)" aria-expanded="true">
+        <div class="section-hdr-icon">🔬</div>
+        <div class="section-hdr-text">
+          <h2>Evaluación y mejora continua</h2>
+          <span>Evaluaciones externas, rankings y calidad docente</span>
+        </div>
+        <div class="section-chevron">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="section-body-inner">
+          <div class="section-label">Áreas</div>
+          <div class="cards-grid cols-3">
+
+            <div class="card" id="card-evaluaciones-externas">
+              <div class="card-title">Evaluaciones externas</div>
+              <div class="card-desc">Resultados de evaluaciones y acreditaciones externas de la UCM según índice Dyntra.</div>
+              <div class="card-actions">
+                <a href="https://www.ucm.es/portaldetransparencia/ranking-dyntra" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver evaluaciones externas">Ver →</a>
+              </div>
+            </div>
+
+            <div class="card" id="card-rankings">
+              <div class="card-title">Rankings institucionales</div>
+              <div class="card-desc">Posicionamiento de la UCM en los principales rankings universitarios nacionales e internacionales.</div>
+              <div class="card-actions">
+                <a href="https://www.ucm.es/opc/ranking-universitarios" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver rankings institucionales">Ver →</a>
+              </div>
+            </div>
+
+            <div class="card" id="card-calidad">
+              <div class="card-title">Calidad docente</div>
+              <div class="card-desc">Evaluación y programas de mejora de la calidad de la actividad docente en la UCM.</div>
+              <div class="card-actions">
+                <a href="https://www.ucm.es/portaldetransparencia/calidad-docente" class="btn btn-rojo" target="_blank" rel="noopener" aria-label="Ver calidad docente">Ver →</a>
               </div>
             </div>
 
@@ -406,7 +476,6 @@ function toggle(hdr) {
 const sections = document.querySelectorAll('.section[id]');
 const navLinks  = document.querySelectorAll('.nav-list a[href^="#"]');
 
-// Marca activo el enlace de sección cuando la sección está en pantalla
 const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -428,17 +497,14 @@ navLinks.forEach(link => {
     if (!target) return;
     e.preventDefault();
 
-    // Si el target es una card, asegurar que su sección padre está abierta
     const parentSection = target.closest('.section');
     if (parentSection && !parentSection.classList.contains('open')) {
       parentSection.classList.add('open');
       parentSection.querySelector('.section-hdr')?.setAttribute('aria-expanded', 'true');
     }
 
-    // Pequeño delay para que el CSS de apertura termine antes de hacer scroll
     setTimeout(() => {
       target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // Animar la card destino brevemente
       if (target.classList.contains('card')) {
         target.style.outline = '2px solid var(--ucm)';
         target.style.outlineOffset = '2px';
